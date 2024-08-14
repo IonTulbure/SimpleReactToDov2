@@ -1,6 +1,6 @@
 import React from "react";
 
-function TODOList() {
+function TODOList(todos) {
     return (
         <ol className="todo_list">
             {todos && todos.length > 0 ? (
