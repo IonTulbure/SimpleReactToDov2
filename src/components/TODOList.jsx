@@ -1,6 +1,15 @@
+import React from "react";
 
 function TODOList() {
-    return <ol className="todo_list">{/* <li> list goes here */}</ol>;
+    return (
+        <ol className="todo_list">
+            {todos && todos.length > 0 ? (
+                todos?.map((item, index) => <Item key={index} item={item} />)
+            ) : (
+                <p>Seems lonely in here, what are you up to?</p>
+            )}
+        </ol>
+    );
 }
 
 function Item({ item }) {
