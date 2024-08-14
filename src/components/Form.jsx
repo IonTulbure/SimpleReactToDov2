@@ -1,5 +1,6 @@
 function Form() {
     const handleSubmit = (event) => {
+        // prevent the form from submitting and reloading the entire app
         event.preventDefault();
         // reset the form
         event.target.reset();
