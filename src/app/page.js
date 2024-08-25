@@ -28,7 +28,7 @@ function Home() {
         <div className="wrapper">
             <Header />
             <TODOHero todos_completed={todos_completed} total_todos={total_todos} />
-            <Form />
+            <Form todos={todos} setTodos={setTodos} />
             <TODOList todos={todos} />
         </div>
     );
