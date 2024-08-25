@@ -16,9 +16,11 @@ body {
   justify-content: center;
   width: 100vw;
 }
+
 button {
   cursor: pointer;
 }
+
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);
@@ -29,16 +31,18 @@ button {
   overflow: hidden;
   white-space: nowrap;
 }
+
 .text_large {
   font-size: 32px;
 }
 .text_small {
   font-size: 24px;
 }
+
 .wrapper {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 768px;
 }
 @media (max-width: 510px) {
   .wrapper {
@@ -48,6 +52,7 @@ button {
     justify-content: center;
   }
 }
+
 header {
   display: flex;
   align-items: center;
@@ -55,6 +60,7 @@ header {
   gap: 12px;
   padding: 42px;
 }
+
 .todohero_section {
   border: 1px solid #c2b39a;
   display: flex;
@@ -77,6 +83,7 @@ header {
   justify-content: center;
   text-align: center;
 }
+
 .form {
   align-self: center;
   width: 97%;
@@ -106,6 +113,7 @@ header {
   background-color: #88ab33;
   border: none;
 }
+
 .todo_list {
   align-self: center;
   width: 97%;
@@ -131,12 +139,14 @@ header {
   color: #fff;
   padding: 12px;
 }
+
 .edit-form input {
   outline: transparent;
   width: calc(100% - 14px);
   height: calc(100% - 12px);
   border: transparent;
 }
+
 .todo_items_left,
 .todo_items_right {
   display: flex;
@@ -157,6 +167,7 @@ header {
   color: #fff;
   border: none;
 }
+
 .todo_items_right button svg {
   fill: #c2b39a;
 }
