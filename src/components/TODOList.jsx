@@ -14,10 +14,16 @@ function TODOList({ todos, setTodos }) {
     );
 }
 
-function Item({ item }) {
+function Item({ item, setTodos }) {
     
     const completeTodo = () => {
-        // perform some action
+        setTodos((prevTodos) =>
+            prevTodos.map((todo) =>
+            todo.id === item.id
+                ? { ...todo, is_completed: !todo.is_completed }
+                : todo
+            )
+        );
     };
 
     return (
