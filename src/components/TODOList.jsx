@@ -1,14 +1,16 @@
 import React from "react";
 
-function TODOList(todos) {
+function TODOList({ todos }) {
     return (
         <ol className="todo_list">
             {todos && todos.length > 0 ? (
-                todos?.map((item, index) => <Item key={index} item={item} />)
+            todos?.map((item, index) => (
+                <Item key={index} item={item} setTodos={setTodos} />
+            ))
             ) : (
-                <p>Seems lonely in here, what are you up to?</p>
+            <p>Seems lonely in here, what are you up to?</p>
             )}
-        </ol>
+      </ol>
     );
 }
 
