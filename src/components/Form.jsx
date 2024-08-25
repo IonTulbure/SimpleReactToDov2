@@ -1,7 +1,15 @@
-function Form() {
+function Form({ setTodos }) {
     const handleSubmit = (event) => {
         // prevent the form from submitting and reloading the entire app
         event.preventDefault();
+
+        // add new todos to state
+        const value = event.target.todo.value;
+        setTodos((prevTodos) => [
+          ...prevTodos,
+          { title: value, id: self.crypto.randomUUID(), is_completed: false },
+        ]);
+
         // reset the form
         event.target.reset();
     };
