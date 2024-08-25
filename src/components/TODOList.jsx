@@ -15,8 +15,13 @@ function TODOList({ todos, setTodos }) {
 }
 
 function Item({ item }) {
+    
+    const completeTodo = () => {
+        // perform some action
+    };
+
     return (
-        <li id={item?.id} className="todo_item">
+        <li id={item?.id} className="todo_item" onClick={completeTodo}>
             <button className="todo_items_left">
                 <svg>
                     <circle cx="11.998" cy="11.998" fillRule="nonzero" r="9.998" />
